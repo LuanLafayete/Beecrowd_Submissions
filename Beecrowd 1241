@@ -1,0 +1,39 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ExemploFundamentos.NET5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            for (int contador = 0; contador < n; contador++)
+            {                
+                string[] p = Console.ReadLine().Split(' ');
+                string A = p[0];
+                string B = p[1];
+            
+                int tamanhoDeA = A.Length;                
+                int tamanhoDeB = B.Length;
+                
+                if (tamanhoDeA == tamanhoDeB)
+                {
+                    Console.WriteLine("encaixa");
+                }
+                else if(A.EndsWith(B))       
+                {
+                    Console.WriteLine("encaixa");
+                }
+                else
+                {
+                    Console.WriteLine("nao encaixa");
+                }
+            }
+        }
+
+    }
+}
